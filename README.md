@@ -1,42 +1,130 @@
-# Currency Converter & Travel Explorer
+# 💱 CurrencyX: Intelligent Currency Conversion with Exchange Trends and Financial Insights
 
-A Spring Boot web app that converts currency AND tells you how many days
-your money could fund a trip to various countries, based on curated
-cost-of-living data.
+CurrencyX is a Java Spring Boot-based web application designed to provide intelligent currency conversion along with exchange-rate trends and financial insights.
 
-## Tech Stack
-- Java 17, Spring Boot 3.3 (Web, Data JPA)
-- H2 in-memory database (auto-seeded on startup)
-- Frankfurter API for live exchange rates (free, no API key needed)
-- Plain HTML/CSS/JS frontend served from `src/main/resources/static`
+The platform allows users to convert currencies using live exchange-rate data, explore historical exchange-rate trends, track currency performance, and gain useful insights from financial data through an interactive and user-friendly web interface.
 
-## How to Run
+🌐 **Live Website:** [CurrencyX](https://currency-converter-travel-explorer.onrender.com)
 
-1. **Prerequisites**: Java 17+ and Maven installed (or use an IDE like
-   IntelliJ / Eclipse / VS Code with the Java extension pack).
+---
 
-2. **Run from terminal**:
-   ```bash
-   cd travel-converter
-   mvn spring-boot:run
-   ```
+## 📌 Project Overview
 
-3. **Run from an IDE**: Import as a Maven project, then run
-   `TravelConverterApplication.java` directly.
+CurrencyX goes beyond traditional currency conversion by combining real-time exchange-rate information with historical analysis and financial insights.
 
-4. Open your browser to **http://localhost:8080**
+The application provides users with:
 
-## API Endpoints
+- Real-time currency conversion
+- Exchange-rate trends
+- Highest and lowest exchange-rate values
+- Currency performance insights
+- Interactive data visualization
+- Responsive web interface
 
-- `GET /api/convert?from=INR&to=USD&amount=100000`
-  Simple currency conversion.
+The application is developed using **Java and Spring Boot** and deployed as a live web application using **Render**.
 
-- `GET /api/travel-recommendations?from=INR&amount=100000`
-  Returns all seeded countries ranked by how many travel days the
-  amount affords, richest-value first.
+---
 
-- `GET /api/countries`
-  Lists the full curated country dataset.
+## ✨ Key Features
+
+### 💱 Real-Time Currency Conversion
+
+Convert an amount from one currency to another using current exchange-rate information obtained through an external exchange-rate API.
+
+### 📈 Exchange Rate Trends
+
+View historical exchange-rate information to understand how a currency has performed over time.
+
+### 📊 Financial Insights
+
+Provides useful information such as:
+
+- Highest exchange rate
+- Lowest exchange rate
+- Currency performance
+- Historical trends
+- Conversion-related insights
+
+### 🌍 Multiple Currencies
+
+Supports currency conversion between different international currencies provided by the exchange-rate service.
+
+### 📱 Responsive Web Interface
+
+The application provides a clean and responsive interface that can be accessed through desktop and mobile browsers.
+
+### ☁️ Live Deployment
+
+The application is deployed on **Render**, allowing users to access CurrencyX through a web browser without setting up the project locally.
+
+---
+
+## 🛠️ Technologies Used
+
+### Backend
+
+- **Java**
+- **Spring Boot**
+- **Spring Web**
+- **Spring Data JPA**
+- **Maven**
+
+### Database
+
+- **H2 Database**
+
+### Frontend
+
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Bootstrap / Responsive UI**
+
+### External API
+
+- **Frankfurter Exchange Rate API**
+
+### Development & Deployment
+
+- **Git**
+- **GitHub**
+- **Render**
+- **Postman**
+
+---
+
+## 🏗️ System Architecture
+
+```text
+                    ┌─────────────────────┐
+                    │       User          │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   Web Interface     │
+                    │ HTML / CSS / JS     │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │  Spring Boot API    │
+                    │    Controllers      │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   Service Layer     │
+                    │   Business Logic    │
+                    └───────┬─────┬───────┘
+                            │     │
+                  ┌─────────┘     └──────────┐
+                  ▼                          ▼
+        ┌─────────────────┐        ┌──────────────────┐
+        │   H2 Database   │        │ Frankfurter API  │
+        │ Currency Data & │        │ Exchange Rates   │
+        │ History         │        └──────────────────┘
+        └─────────────────┘
 
 ## Project Structure
 
