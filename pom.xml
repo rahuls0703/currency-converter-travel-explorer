@@ -12,10 +12,10 @@
     </parent>
 
     <groupId>com.travelconverter</groupId>
-    <artifactId>travel-converter</artifactId>
+    <artifactId>currencyx</artifactId>
     <version>1.0.0</version>
-    <name>travel-converter</name>
-    <description>Currency Converter + Travel Affordability Explorer</description>
+    <name>CurrencyX</name>
+    <description>CurrencyX: Intelligent Currency Conversion with Exchange Trends and Financial Insights</description>
 
     <properties>
         <java.version>17</java.version>
